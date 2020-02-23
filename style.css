@@ -1,0 +1,17 @@
+html{
+  background-color: #fff;
+}
+
+#t{
+  display: block;
+  text-align: center;
+}
+
+.base1{
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e66457, #ff7768);
+  box-shadow:  18px 18px 36px #ad4b42,
+               -18px -18px 36px #ff9380;
+}

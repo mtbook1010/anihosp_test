@@ -1,31 +1,325 @@
-html{
-  background-color: #FF6F61;
+.surgery-section {
+  background: #f6fafd;
+  padding: 56px 0;
+  overflow: hidden;
 }
 
-#t{
-  display: block;
-  font-family: 'Noto Sans JP', ;
-  text-align: center;
-  width: 30%;
-  padding: 20px;
-  margin: 50px auto;
-  color: #fff;
-  font-size: 30px;
-  background: #FF6F61;
-  box-shadow:  13px 13px 26px #b85046,
-             -13px -13px 26px #ff8e7c;
+.overlay {
+  border-radius: 32px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 1317px;
+  height: 744px;
+  margin: 0 auto;
 }
 
-.base1{
-  display: block;
-  font-family: 'Noto Sans JP', ;
+.content-wrapper {
+  background: #f6fafd;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  border-radius: 24px;
+  background: #fff;
+  width: 1160px;
+  max-width: 100%;
+  padding: 48px 40px;
+}
+
+.header-section {
   text-align: center;
-  color: #fff;
-  width: 100px;;
-  height: 100px;
-  margin: 200px auto;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #2485cb;
+}
+
+.title-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.title-text {
+  font: 500 20px Inter, sans-serif;
+  letter-spacing: 0.4px;
+}
+
+.subtitle {
+  color: #303030;
+  font: 700 28px YuGothic, sans-serif;
+  letter-spacing: 2.24px;
+  margin-top: 32px;
+}
+
+.team-section {
+  display: flex;
+  gap: 47px;
+  margin-top: 36px;
+  justify-content: center;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.member-photo {
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
-  background: linear-gradient(145deg, #e66457, #ff7768);
-  box-shadow:  18px 18px 36px #ad4b42,
-             -18px -18px 36px #ff9380;
+  object-fit: contain;
+}
+
+.member-role {
+  font: 500 12px YuGothic, sans-serif;
+  color: #303030;
+  margin-top: 15px;
+}
+
+.member-name {
+  font: 700 20px YuGothic, sans-serif;
+  color: #303030;
+  margin-top: 11px;
+}
+
+.divider {
+  background: #eee;
+  height: 1px;
+  width: 480px;
+  margin: 40px auto;
+}
+
+.features-grid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 240px;
+  border-radius: 10px;
+}
+
+.feature-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.feature-content {
+  margin-top: 20px;
+}
+
+.feature-title {
+  color: #2485cb;
+  font: 700 20px YuGothic, sans-serif;
+  line-height: 26px;
+  letter-spacing: 1.6px;
+}
+
+.feature-description {
+  color: #666;
+  font: 500 13px YuGothic, sans-serif;
+  letter-spacing: 1.04px;
+  margin-top: 20px;
+}
+
+.experience-section {
+  background: #f6fafd;
+  padding: 0 0 64px;
+}
+
+.experience-container {
+  width: 904px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.experience-title {
+  color: #2485cb;
+  font: 500 20px Inter, sans-serif;
+  letter-spacing: 0.4px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.experience-subtitle {
+  color: #303030;
+  font: 700 28px YuGothic, sans-serif;
+  letter-spacing: 2.24px;
+  margin-top: 32px;
+}
+
+.experience-description {
+  color: #666;
+  font: 700 16px YuGothic, sans-serif;
+  letter-spacing: 1.28px;
+  margin-top: 40px;
+}
+
+.experience-image {
+  width: 100%;
+  margin-top: 16px;
+  object-fit: contain;
+}
+
+.treatments-card {
+  border-radius: 24px;
+  background: #fff;
+  width: 980px;
+  max-width: 100%;
+  padding: 48px 40px;
+  margin-top: 48px;
+}
+
+.treatments-title {
+  color: #303030;
+  font: 700 28px YuGothic, sans-serif;
+  text-align: center;
+  letter-spacing: 2.24px;
+}
+
+.treatments-list {
+  color: #666;
+  font: 500 14px YuGothic, sans-serif;
+  letter-spacing: 1.12px;
+  margin-top: 40px;
+}
+
+.contact-section {
+  border-radius: 32px;
+  background: #ecf5fc;
+  width: 980px;
+  max-width: 100%;
+  margin: 46px auto 0;
+  padding: 64px;
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.contact-content {
+  flex: 1;
+  min-width: 240px;
+}
+
+.contact-title {
+  color: #2485cb;
+  font: 700 32px YuGothic, sans-serif;
+  letter-spacing: 0.64px;
+}
+
+.contact-description {
+  color: #303030;
+  font: 500 16px YuGothic, sans-serif;
+  letter-spacing: 0.32px;
+  margin-top: 32px;
+}
+
+.phone-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 28px;
+  max-width: 340px;
+  margin-top: 24px;
+}
+
+.phone-number {
+  color: #2485cb;
+  font: 500 32px/1.8 Lexend, sans-serif;
+  letter-spacing: 0.64px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.phone-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.locations-list {
+  margin-top: 24px;
+  color: #666;
+  font: 14px YuGothic, sans-serif;
+  letter-spacing: 1.4px;
+}
+
+.location-divider {
+  height: 1px;
+  background: #d9d9d9;
+  border: 1px solid #d9d9d9;
+}
+
+.location-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.location-marker {
+  width: 10px;
+  height: 10px;
+  border-radius: 1px;
+  background: #2485cb;
+}
+
+.location-area {
+  font-weight: 700;
+}
+
+.location-name {
+  font-weight: 500;
+}
+
+.contact-image {
+  width: 396px;
+  border-radius: 14px;
+  object-fit: contain;
+  flex: 1;
+  min-width: 240px;
+}
+
+@media (max-width: 991px) {
+  .card-container {
+    padding: 0 20px;
+  }
+
+  .features-grid {
+    white-space: initial;
+  }
+
+  .experience-description {
+    max-width: 100%;
+  }
+
+  .treatments-card {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .contact-section {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .phone-card {
+    padding: 0 20px;
+  }
+
+  .contact-image {
+    max-width: 100%;
+  }
 }

@@ -7,6 +7,13 @@ body {
   padding: 48px 0px;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .fv-logo {
   position: absolute;
   top: -80px;
@@ -24,6 +31,8 @@ body {
   justify-content: flex-end;
   flex-wrap: wrap;
   padding: 0px 48px;
+  width: 100%;
+  max-width: 1320px;
 }
 
 .nav-link {

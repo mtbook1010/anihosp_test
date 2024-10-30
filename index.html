@@ -15,6 +15,83 @@
 
 <body>
 
+  <style>
+    .sticky-cta-sticky {
+      position: fixed;
+      bottom: 20px;
+      /* 画面下からの距離 */
+      right: 20px;
+      /* 画面右からの距離 */
+      z-index: 1000;
+      /* 他の要素の上に配置 */
+      border-radius: 9.862px;
+      background: var(--red, #f9685f);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      white-space: nowrap;
+      justify-content: center;
+      padding: 16px 20px;
+    }
+
+    .sticky-cta-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sticky-cta-message {
+      align-self: stretch;
+      border-radius: 10.452px;
+      background: var(--white, #fff);
+      color: var(--red, #f9685f);
+      letter-spacing: 1.18px;
+      padding: 10px 16px;
+      font: 700 15px/1.2 YuGothic, sans-serif;
+      text-align: center;
+    }
+
+    .sticky-contact-info {
+      display: flex;
+      margin-top: 4px;
+      align-items: center;
+      gap: 12px;
+      color: var(--white, #fff);
+      letter-spacing: 1.78px;
+      justify-content: center;
+      font: 500 30px/1.8 Lexend, sans-serif;
+    }
+
+    .sticky-phone-icon {
+      aspect-ratio: 0.97;
+      object-fit: contain;
+      object-position: center;
+      width: 29px;
+      align-self: stretch;
+      margin: auto 0;
+    }
+
+    .sticky-phone-number {
+      leading-trim: both;
+      text-edge: cap;
+      align-self: stretch;
+      margin: auto 0;
+    }
+  </style>
+
+  <section class="sticky-cta-sticky">
+    <div class="sticky-cta-content">
+      <p class="sticky-cta-message">まずはお電話ください</p>
+      <div class="sticky-contact-info">
+        <img loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/b81ba95d31ffbb4635c01edf6d33bd9761092a59a84bc8cdf7d22fa8a1772719?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+          class="sticky-phone-icon" alt="Phone icon" />
+        <p class="sticky-phone-number">075-465-3330</p>
+      </div>
+    </div>
+  </section>
+
   <header>
     <nav class="nav-container">
       <a href="#about" class="nav-link">私たちについて</a>
@@ -291,7 +368,7 @@
         </article>
 
         <section class="important-info">
-          <h2 class="ip-info-title">必ずご確認ください</h2>
+          <div class="ip-info-title">必ずご確認ください</div>
           <div class="ip-info-content">
             <div class="ip-info-card">
               <h3 class="ip-card-title">診療費</h3>
@@ -353,6 +430,761 @@
       </div>
     </div>
   </section>
+
+  <section class="flow-section">
+    <div class="flow-container">
+      <div class="flow-content">
+        <header class="flow-header">
+          <h3 class="flow-subtitle">FLOW</h3>
+          <h2 class="flow-title">診察までの流れ</h2>
+        </header>
+        <div class="flow-steps">
+          <div class="flow-step-row">
+            <article class="flow-step">
+              <header class="flow-step-header">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/12b0471fb973f458f84a40f61b3ad03b21e5ddf001daec6fef27b0346f9b6c95?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                  alt="" class="flow-step-icon" />
+                <h4 class="flow-step-title">電話予約</h4>
+              </header>
+              <div class="flow-step-content">
+                <p class="flow-step-description">まずはお気軽にお問い合わせください。</p>
+                <div class="flow-contact">
+                  <div class="flow-contact-button">
+                    <div class="flow-contact-info">
+                      <div class="flow-contact-phone">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f08dd53a6d29287442e02199cca0ad322010e18a7fe9ec06df8ed9c5efdf5b0?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                          alt="" class="flow-contact-icon" />
+                        <span class="flow-contact-number">075-465-3330</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="flow-contact-hours">（年中無休 9:00～22:30）</p>
+                </div>
+              </div>
+            </article>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/0502ef4f8cc77a066fe0351f3ecd8e3eb8d81f3a4fd5d9ff872c5e926ae6ab53?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              alt="" class="flow-arrow" />
+            <article class="flow-step">
+              <header class="flow-step-header">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/cfe4d85182c5d194cd80435aacfdb019209a822b607e52957539c1868125059a?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                  alt="" class="flow-step-icon" />
+                <h4 class="flow-step-title">ご来院</h4>
+              </header>
+              <div class="flow-step-content">
+                <p class="flow-step-description">予約時間の5分前にはお越しくださいますようお願いいたします。</p>
+                <p class="flow-step-description">※お車でお越しの際には近隣駐車場をご利用ください。</p>
+              </div>
+            </article>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d4f95000cdc98f5e9895da6e5ef8dceddba67ca574cacc300b4140571c2ea0b?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              alt="" class="flow-arrow" />
+            <article class="flow-step">
+              <header class="flow-step-header">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/fd42befa772d28fa482762c089d70696e1b097e9beabc64ca985810ebb3881da?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                  alt="" class="flow-step-icon" />
+                <h4 class="flow-step-title">受付</h4>
+              </header>
+              <div class="flow-step-content">
+                <p class="flow-step-description">受付にてご予約いただいた内容をお伝えください。</p>
+              </div>
+            </article>
+          </div>
+          <div class="flow-step-row">
+            <article class="flow-step">
+              <header class="flow-step-header">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8918b58016de6763128ddb6dac7e8c55245cf088fa0b6be2f061fb55be0426d3?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                  alt="" class="flow-step-icon" />
+                <h4 class="flow-step-title">診察</h4>
+              </header>
+              <div class="flow-step-content">
+                <p class="flow-step-description">飼い主様に十分にご理解いただけるよう、わかりやすく丁寧な説明を徹底しております。気になる症状などお気軽に担当獣医師にご相談ください。</p>
+              </div>
+            </article>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/68a2d75e85bebe3bb97d293ef69dba63ecc2e73cfd54625eb117d91899730261?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              alt="" class="flow-arrow" />
+            <article class="flow-step">
+              <header class="flow-step-header">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/29b13be33afd7d15305b21f630f3286c3fa2a7a54a79fc99992a529d00884b0d?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                  alt="" class="flow-step-icon" />
+                <h4 class="flow-step-title">お薬処方・お会計</h4>
+              </header>
+              <div class="flow-step-content">
+                <p class="flow-step-description">診察が終わりましたら、待合室でお待ちください。 お会計の準備が出来ましたら、お呼びいたします。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="diseases-section">
+    <div class="diseases-container">
+      <header class="diseases-header">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4d9eca8730a16b9eb2e3e367494defd47e07f127c14fa123df37667dd9de60e?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+          alt="" class="diseases-icon" />
+        <div class="diseases-title">整形外科でみることの多い病気</div>
+      </header>
+      <div class="diseases-grid">
+        <div class="diseases-row">
+          <article class="disease-card">
+            <h3 class="disease-title">前肢の骨折</h3>
+            <p class="disease-description">前足の骨折で、小型犬に多く発生します。 特に5㎏以下の小型犬は要注意です。</p>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ea4c16b8da611aefeb05f4f28aff26f801d759564d9e0d236fb842557baf68c?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              alt="" class="disease-icon" />
+          </article>
+          <article class="disease-card">
+            <h3 class="disease-title">後肢・骨盤付近の骨折</h3>
+            <p class="disease-description">後ろ足付近の骨折で、 犬・猫に関わらず起こりえます。</p>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d0a9c44bf39b30c3e46cb37fac011673a549d1383153f37c84be76e6a65024a?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              alt="" class="disease-icon" />
+          </article>
+        </div>
+        <div class="diseases-row">
+          <article class="disease-card">
+            <h3 class="disease-title">前十字靭帯断裂</h3>
+            <p class="disease-description">突然足を上げはじめることで発覚します。 中型・大型犬に多いです。</p>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ea4c16b8da611aefeb05f4f28aff26f801d759564d9e0d236fb842557baf68c?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              alt="" class="disease-icon" />
+          </article>
+          <article class="disease-card">
+            <h3 class="disease-title">膝蓋骨脱臼</h3>
+            <p class="disease-description">小型犬に多く発生します。 触られるのを嫌がったりすることで発覚します。</p>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d0a9c44bf39b30c3e46cb37fac011673a549d1383153f37c84be76e6a65024a?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              alt="" class="disease-icon" />
+          </article>
+        </div>
+        <div class="diseases-row">
+          <article class="disease-card">
+            <h3 class="disease-title">椎間板ヘルニア</h3>
+            <p class="disease-description">突然、両方の足をひきずりはじめる、 歩けなくなるなどの強い症状がでます。</p>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ea4c16b8da611aefeb05f4f28aff26f801d759564d9e0d236fb842557baf68c?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              alt="" class="disease-icon" />
+          </article>
+          <article class="disease-card">
+            <h3 class="disease-title">股関節疾患</h3>
+            <p class="disease-description">後ろ足をけんけんしたり、 引っ張ると痛がったりします。</p>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d0a9c44bf39b30c3e46cb37fac011673a549d1383153f37c84be76e6a65024a?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              alt="" class="disease-icon" />
+          </article>
+        </div>
+        <div class="diseases-row">
+          <article class="disease-card">
+            <h3 class="disease-title">捻挫・打撲</h3>
+            <p class="disease-description">ちょっとした拍子に、突然びっこを引き始めたり、 足を痛がったりします。</p>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ea4c16b8da611aefeb05f4f28aff26f801d759564d9e0d236fb842557baf68c?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              alt="" class="disease-icon" />
+          </article>
+          <article class="disease-card">
+            <h3 class="disease-title">股関節疾患</h3>
+            <p class="disease-description">後ろ足をけんけんしたり、 引っ張ると痛がったりします。</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="faq-container">
+      <header class="faq-header">
+        <h3 class="faq-subtitle">FAQ</h3>
+        <h2 class="faq-title">よくある質問</h2>
+      </header>
+      <div class="faq-list">
+        <button class="faq-item">
+          <div class="faq-question">
+            <div class="faq-question-content">
+              <span class="faq-q">Q.</span>
+              <p class="faq-question-text">
+                うちの子は体が小さいけど麻酔は大丈夫でしょうか？10歳を超えているけど手術に耐えられるか心配です。持病があってお薬を飲んでいるけど大丈夫ですか？手術のリスクや合併症について知りたいです。</p>
+            </div>
+            <div class="faq-toggle"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <span class="faq-a">A.</span>
+              <p class="faq-answer-text">
+                手術や麻酔に関しては、それぞれのどうぶつの体格、年齢、持病などを考慮してリスクを評価しています。小さな体や高齢のどうぶつに対しても、適切な麻酔方法や手術前の検査を行い、安全性を確保するよう努めています。持病のあるどうぶつについては、現在飲んでいる薬との相互作用を確認し、適切な準備を行います。手術には感染症や出血、麻酔反応などのリスクが伴いますが、これらを最小限に抑えるため、経験豊富なスタッフが細心の注意を払って対応します。不安な点があれば、どうぞ遠慮なくご相談ください。
+              </p>
+            </div>
+          </div>
+        </button>
+
+        <button class="faq-item">
+          <div class="faq-question">
+            <div class="faq-question-content">
+              <span class="faq-q">Q.</span>
+              <p class="faq-question-text">手術後はどれくらい通院が必要ですか？抜糸はいつ行いますか？</p>
+            </div>
+            <div class="faq-toggle"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <span class="faq-a">A.</span>
+              <p class="faq-answer-text">
+                通院の頻度は手術の種類や動物の回復状況によりますが、通常、退院後1週間から10日後に抜糸のための診察があります。その後、傷の治り具合や体調に応じて追加の通院が必要になる場合があります。具体的な通院スケジュールについては、手術後に詳しくご説明いたします。
+              </p>
+            </div>
+          </div>
+        </button>
+
+        <button class="faq-item">
+          <div class="faq-question">
+            <div class="faq-question-content">
+              <span class="faq-q">Q.</span>
+              <p class="faq-question-text">手術後、面会はいつでもできますか？面会に来れる人数は？</p>
+            </div>
+            <div class="faq-toggle"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <span class="faq-a">A.</span>
+              <p class="faq-answer-text">
+                面会については、どうぶつのストレスを避けるため、決まった時間内でのご案内とさせていただいています。面会時間や人数についても、事前にお知らせいただけるとスムーズです。面会を通じて、どうぶつの安心感を高めるためにご協力をお願いしております。
+              </p>
+            </div>
+          </div>
+        </button>
+
+        <button class="faq-item">
+          <div class="faq-question">
+            <div class="faq-question-content">
+              <span class="faq-q">Q.</span>
+              <p class="faq-question-text">手術中や術後の痛みはどのくらいありますか？どれくらい続きますか？</p>
+            </div>
+            <div class="faq-toggle"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <span class="faq-a">A.</span>
+              <p class="faq-answer-text">
+                手術中は全身麻酔を行いますので、痛みを感じることはありません。術後はどうぶつが痛みを感じないように、鎮痛剤を使用して痛みをコントロールします。手術後数日間は多少の痛みが残ることがありますが、痛み止めの処方により、できる限り快適に過ごせるようにケアいたします。不安があれば、遠慮なくご相談ください。
+              </p>
+            </div>
+          </div>
+        </button>
+
+        <button class="faq-item">
+          <div class="faq-question">
+            <div class="faq-question-content">
+              <span class="faq-q">Q.</span>
+              <p class="faq-question-text">手術後、どれくらいで退院できますか？</p>
+            </div>
+            <div class="faq-toggle"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              <span class="faq-a">A.</span>
+              <p class="faq-answer-text">
+                入院期間は手術の種類や動物の体調によりますが、一般的には1〜3日程度です。早く回復が進んだ場合は当日退院も可能なことがありますが、安全を確保するために必要な期間入院していただくことをおすすめします。退院の目安については、手術後の経過を見ながら判断いたします。
+              </p>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach(item => {
+        const question = item.querySelector(".faq-question");
+
+        question.addEventListener("click", () => {
+          const answer = item.querySelector(".faq-answer");
+
+          // Toggle the "active" class on the answer to show or hide it
+          answer.classList.toggle("active");
+
+          // Rotate the toggle icon if there is one
+          const toggleIcon = question.querySelector(".faq-toggle");
+          if (toggleIcon) {
+            toggleIcon.classList.toggle("rotated");
+          }
+        });
+      });
+    });
+  </script>
+
+  <section class="group-section">
+    <div class="group-container">
+      <header class="group-header">
+        <h2 class="group-title">どうぶつ病院京都グループ</h2>
+        <h3 class="group-subtitle">京都エリア</h3>
+      </header>
+      <div class="group-list">
+        <article class="group-item">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/fff9da65e3f251ca6b403c31fbcb5f7efdd27886c50d83139b214f842f6e547f?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+            alt="動物病院 京都 本院の外観" class="group-image" />
+          <div class="group-content">
+            <div class="group-info">
+              <div class="group-name">
+                <h4 class="group-name-text">動物病院 京都 本院</h4>
+                <div class="group-address">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3df88d756204dbae69608a7bc7c361dd54ca034edf7b20b177b0983bd4ec861?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                    alt="" class="group-address-icon" />
+                  <p class="group-address-text">京都府京都市北区北野下白梅町44-1 Cassiaビル1F</p>
+                </div>
+              </div>
+              <p class="group-description">
+                2013年に開院。年中無休・夜間診察も受付。TPLOなど、整形外科における高難易度手術にも対応可能。わんちゃん、ねこちゃんに負担をかけないような手術・治療を心がけています。</p>
+            </div>
+            <a href="#" class="group-link">
+              <span class="group-link-text">公式ホームページ</span>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d6694f72fba855733ebab367602f4dc3f1fc33e4a0dc8f1836a7227be685ec?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                alt="" class="group-link-icon" />
+            </a>
+          </div>
+        </article>
+        <article class="group-item">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/b409866a321b368618b60dcc412dc9e82960fd4884dd4c5c76850f3eaa71dd52?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+            alt="どうぶつ病院京都 四条堀川の外観" class="group-image" />
+          <div class="group-content">
+            <div class="group-info">
+              <div class="group-name">
+                <h4 class="group-name-text">どうぶつ病院京都 四条堀川</h4>
+                <div class="group-address">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3df88d756204dbae69608a7bc7c361dd54ca034edf7b20b177b0983bd4ec861?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                    alt="" class="group-address-icon" />
+                  <p class="group-address-text">京都府北区北野白梅町55-3 北野白梅町ビル 1階</p>
+                </div>
+              </div>
+              <p class="group-description">2023年3月にオープン。CUaRE DOG
+                CAREを併設しており、病気の治療だけでなく、爪切りや耳掃除などわんちゃんの健康を目的とした日常ケアを提供しています。完全予約制で待ち時間が少なく、個室診療で安心してご利用いただけます。</p>
+            </div>
+            <a href="#" class="group-link">
+              <span class="group-link-text">公式ホームページ</span>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d6694f72fba855733ebab367602f4dc3f1fc33e4a0dc8f1836a7227be685ec?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                alt="" class="group-link-icon" />
+            </a>
+          </div>
+        </article>
+        <article class="group-item">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/cedcd6834bb83f3a2855f0b73242d6fb24c8117835292455ca89b1f435cd2b4e?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+            alt="動物病院 京都 ねこの病院の外観" class="group-image" />
+          <div class="group-content">
+            <div class="group-info">
+              <div class="group-name">
+                <h4 class="group-name-text">動物病院 京都 ねこの病院</h4>
+                <div class="group-address">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3df88d756204dbae69608a7bc7c361dd54ca034edf7b20b177b0983bd4ec861?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                    alt="" class="group-address-icon" />
+                  <p class="group-address-text">京都府京都市上京区西町２４−１４ 東入ル西町２４－１ 北野エスポワコリン</p>
+                </div>
+              </div>
+              <p class="group-description">
+                京都で唯一のねこ専門病院。デリケートなねこちゃんに配慮し、通院におけるストレスを緩和できるような環境づくりを意識し、ねこちゃんそれぞれの個性に合った診療スタイルで対応いたします。</p>
+            </div>
+            <a href="#" class="group-link">
+              <span class="group-link-text">公式ホームページ</span>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d6694f72fba855733ebab367602f4dc3f1fc33e4a0dc8f1836a7227be685ec?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                alt="" class="group-link-icon" />
+            </a>
+          </div>
+        </article>
+        <article class="group-item">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/787d0d90188ff84913c00f231d54106091f86e0fe4849281350974fd61050847?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+            alt="動物病院 京都 西京桂院の外観" class="group-image" />
+          <div class="group-content">
+            <div class="group-info">
+              <div class="group-name">
+                <h4 class="group-name-text">動物病院 京都 西京桂院</h4>
+                <div class="group-address">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d3df88d756204dbae69608a7bc7c361dd54ca034edf7b20b177b0983bd4ec861?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                    alt="" class="group-address-icon" />
+                  <p class="group-address-text">京都府北区北野白梅町55-3 北野白梅町ビル 1階</p>
+                </div>
+              </div>
+              <p class="group-description">
+                2018年より「どうぶつ病院京都グループ」に加入。JAHA内科認定医が在籍しており、より専門的な治療に対応可能。本院や四条堀川、ねこの病院とも連携しながら動物達の快適な暮らしをサポートします。</p>
+            </div>
+            <a href="#" class="group-link">
+              <span class="group-link-text">公式ホームページ</span>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d6694f72fba855733ebab367602f4dc3f1fc33e4a0dc8f1836a7227be685ec?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                alt="" class="group-link-icon" />
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .footer {
+      justify-content: center;
+      align-items: center;
+      background: #2485cb;
+      display: flex;
+      flex-direction: column;
+      padding: 80px 48px;
+    }
+
+    @media (max-width: 991px) {
+      .footer {
+        padding: 0 20px;
+      }
+    }
+
+    .footer-content {
+      display: flex;
+      width: 1200px;
+      max-width: 100%;
+      align-items: flex-start;
+      gap: 40px 48px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      text-align: center;
+      letter-spacing: 1.28px;
+      justify-content: flex-start;
+      width: 200px;
+      font: 700 16px/1.4 YuGothic, sans-serif;
+    }
+
+    @media (max-width: 991px) {
+      .nav-links {
+        white-space: normal;
+      }
+    }
+
+    .nav-item {
+      display: flex;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid #fff;
+      max-width: 100%;
+      width: 200px;
+      padding: 20px 8px;
+    }
+
+    @media (max-width: 991px) {
+      .nav-item {
+        white-space: normal;
+      }
+    }
+
+    .consultation-box {
+      align-items: center;
+      border-radius: 24px;
+      background: #ecf5fc;
+      display: flex;
+      min-width: 240px;
+      gap: 40px 45px;
+      overflow: hidden;
+      justify-content: flex-start;
+      width: 440px;
+      padding: 34px;
+    }
+
+    @media (max-width: 991px) {
+      .consultation-box {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+    }
+
+    .consultation-content {
+      align-self: stretch;
+      display: flex;
+      min-width: 240px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex: 1;
+      flex-basis: 0%;
+      margin: auto 0;
+      padding: 3px 0;
+    }
+
+    .consultation-header {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      font-family: YuGothic, sans-serif;
+      justify-content: flex-start;
+    }
+
+    @media (max-width: 991px) {
+      .consultation-header {
+        white-space: normal;
+      }
+    }
+
+    .consultation-title {
+      color: #2485cb;
+      leading-trim: both;
+      text-edge: cap;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.48px;
+    }
+
+    .consultation-description {
+      color: #303030;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.96px;
+      margin-top: 8px;
+    }
+
+    .contact-info {
+      border-radius: 6px;
+      background-color: #fff;
+      display: flex;
+      margin-top: 34px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: 23px;
+    }
+
+    @media (max-width: 991px) {
+      .contact-info {
+        padding: 0 20px;
+      }
+    }
+
+    .phone-number {
+      align-self: center;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #2485cb;
+      letter-spacing: 1.7px;
+      justify-content: center;
+      font: 500 28px/1.8 Lexend, sans-serif;
+    }
+
+    @media (max-width: 991px) {
+      .phone-number {
+        white-space: normal;
+      }
+    }
+
+    .phone-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 23px;
+      align-self: stretch;
+      margin: auto 0;
+    }
+
+    .hospital-list {
+      display: flex;
+      margin-top: 17px;
+      width: 100%;
+      flex-direction: column;
+      color: #666;
+      letter-spacing: 1.14px;
+      justify-content: flex-start;
+      font: 11px YuGothic, sans-serif;
+    }
+
+    .hospital-divider {
+      background-color: #d9d9d9;
+      min-height: 0px;
+      width: 100%;
+      border: 1px solid #d9d9d9;
+    }
+
+    .hospital-grid {
+      display: flex;
+      margin-top: 16px;
+      width: 100%;
+      align-items: center;
+      gap: 12px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding: 0 6px;
+    }
+
+    .hospital-item {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      justify-content: flex-start;
+      margin: auto 0;
+    }
+
+    .hospital-location {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      justify-content: flex-start;
+      margin: auto 0;
+    }
+
+    .location-marker {
+      border-radius: 1px;
+      background-color: #2485cb;
+      align-self: stretch;
+      display: flex;
+      width: 7px;
+      height: 7px;
+      margin: auto 0;
+    }
+
+    .hospital-name {
+      leading-trim: both;
+      text-edge: cap;
+      font-weight: 500;
+      align-self: stretch;
+      margin: auto 0;
+    }
+
+    .map-section {
+      align-self: stretch;
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      color: #fff;
+      letter-spacing: 0.96px;
+      justify-content: flex-start;
+      flex: 1;
+      flex-basis: 68px;
+      font: 500 16px YuGothic, sans-serif;
+    }
+
+    @media (max-width: 991px) {
+      .map-section {
+        max-width: 100%;
+      }
+    }
+
+    .map-image {
+      aspect-ratio: 1.36;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      border-radius: 24px;
+      margin-top: 20px;
+      flex: 1;
+    }
+
+    @media (max-width: 991px) {
+      .map-image {
+        max-width: 100%;
+      }
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <nav class="nav-links">
+        <a href="#about" class="nav-item">私たちについて</a>
+        <a href="#for-owners" class="nav-item">飼い主様へ</a>
+        <a href="#consultation-flow" class="nav-item">診察の流れ</a>
+        <a href="#contact" class="nav-item">お問い合わせ</a>
+      </nav>
+      <section class="consultation-box">
+        <div class="consultation-content">
+          <div class="consultation-header">
+            <h2 class="consultation-title">無料相談を申し込む</h2>
+            <p class="consultation-description">ペット・飼主様の状況に合わせて、下記の中から適切な病院をご案内いたします。</p>
+          </div>
+          <div class="contact-info">
+            <div class="phone-number">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/ebd05ab2bbd3d5aba6c0624d1825f8c976d3f5ad9633b7191515ef4117e38c6b?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+                alt="Phone icon" class="phone-icon" />
+              <span>075-465-3330</span>
+            </div>
+            <div class="hospital-list">
+              <hr class="hospital-divider" />
+              <div class="hospital-grid">
+                <div class="hospital-item">
+                  <div class="hospital-location">
+                    <span class="location-marker" aria-hidden="true"></span>
+                    <span>北　区</span>
+                  </div>
+                  <span class="hospital-name">動物病院京都 本院</span>
+                </div>
+                <div class="hospital-item">
+                  <div class="hospital-location">
+                    <span class="location-marker" aria-hidden="true"></span>
+                    <span>上京区</span>
+                  </div>
+                  <span class="hospital-name">動物病院 京都 ねこの病院</span>
+                </div>
+                <div class="hospital-item">
+                  <div class="hospital-location">
+                    <span class="location-marker" aria-hidden="true"></span>
+                    <span>中京区</span>
+                  </div>
+                  <span class="hospital-name">どうぶつ病院京都 四条堀川</span>
+                </div>
+                <div class="hospital-item">
+                  <div class="hospital-location">
+                    <span class="location-marker" aria-hidden="true"></span>
+                    <span>西京区</span>
+                  </div>
+                  <span class="hospital-name">動物病院京都 西京桂院</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="map-section">
+        <h3>▼ マップ</h3>
+        <iframe class="map-image"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.213680696741!2d135.7269316967895!3d35.02638390000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600107936c1b04f7%3A0x1c0ea60a227f0384!2z5YuV54mp55eF6Zmi5Lqs6YO9IOacrOmZog!5e0!3m2!1sja!2sjp!4v1730284800593!5m2!1sja!2sjp"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </footer>
 
 </body>
 

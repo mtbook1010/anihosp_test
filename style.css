@@ -617,6 +617,7 @@ header {
 @media (max-width: 991px) {
   .vet-services {
     padding: 0 20px;
+    overflow: hidden;
   }
 }
 
@@ -832,7 +833,7 @@ header {
 @media (max-width: 991px) {
   .ip-info-content {
     max-width: 100%;
-    margin-top: 40px;
+    margin-top: 24px;
   }
 }
 
@@ -904,7 +905,7 @@ header {
   color: #666;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.5px;
+  line-height: 1.5;
   letter-spacing: 0.56px;
   margin-top: 16px;
 }
@@ -939,7 +940,7 @@ header {
 @media (max-width: 991px) {
   .flow-container {
     max-width: 100%;
-    padding: 100px 20px;
+    padding: 48px 20px;
   }
 }
 
@@ -962,6 +963,7 @@ header {
 @media (max-width: 991px) {
   .flow-header {
     white-space: initial;
+    width: 100%;
   }
 }
 
@@ -1007,6 +1009,7 @@ header {
 @media (max-width: 991px) {
   .flow-step-row {
     max-width: 100%;
+    flex-direction: column;
   }
 }
 
@@ -1023,7 +1026,8 @@ header {
 
 @media (max-width: 991px) {
   .flow-step {
-    padding: 0 20px;
+    padding: 24px;
+    width: 100%;
   }
 }
 
@@ -1173,7 +1177,7 @@ header {
 @media (max-width: 991px) {
   .diseases-section {
     max-width: 100%;
-    padding: 100px 0 0 20px;
+    padding: 20px 0 0 20px;
   }
 }
 
@@ -1192,7 +1196,7 @@ header {
 @media (max-width: 991px) {
   .diseases-container {
     max-width: 100%;
-    padding: 100px 20px;
+    padding: 48px 20px;
   }
 }
 
@@ -1218,6 +1222,8 @@ header {
   .diseases-header {
     max-width: 100%;
     white-space: initial;
+    padding: 0 !important;
+    justify-content: center;
   }
 }
 
@@ -1238,6 +1244,7 @@ header {
 @media (max-width: 991px) {
   .diseases-title {
     max-width: 100%;
+    font-size: 24px;
   }
 }
 
@@ -1259,7 +1266,8 @@ header {
   .diseases-grid {
     max-width: 100%;
     margin-top: 40px;
-    padding: 0 20px;
+    padding: 24px 20px;
+    gap: 20px;
   }
 }
 
@@ -1275,6 +1283,7 @@ header {
 @media (max-width: 991px) {
   .diseases-row {
     max-width: 100%;
+    gap: 20px;
   }
 }
 
@@ -1296,7 +1305,8 @@ header {
 @media (max-width: 991px) {
   .disease-card {
     max-width: 100%;
-    padding: 0 20px;
+    padding: 20px;
+    min-height: 0;
   }
 }
 
@@ -1344,7 +1354,7 @@ header {
   .faq-section {
     max-width: 100%;
     white-space: initial;
-    padding: 100px 20px;
+    padding: 48px 20px;
   }
 }
 
@@ -1446,7 +1456,7 @@ header {
   .faq-question {
     max-width: 100%;
     white-space: initial;
-    padding: 0 20px;
+    padding: 20px;
   }
 }
 
@@ -1802,7 +1812,7 @@ header {
   color: #666;
   font-size: 14px;
   font-weight: 500;
-  line-height: 19px;
+  line-height: 1.5;
   letter-spacing: 0.72px;
   margin-top: 12px;
 }
@@ -1837,6 +1847,7 @@ header {
 @media (max-width: 991px) {
   .group-link {
     white-space: initial;
+    width: 100%;
   }
 }
 
@@ -2041,7 +2052,7 @@ header {
     padding: 0;
   }
   .vs-content-wrapper {
-    padding: 0px 24px;
+    padding: 0px 20px;
   }
   .hero-title {
     font-size: 28px;
@@ -2080,6 +2091,53 @@ header {
   .dps2 {
     flex-direction: column-reverse;
     align-items: flex-start;
+  }
+  .ip-info-title {
+    font-size: 24px;
+  }
+  .flow-arrow {
+    rotate: 90deg;
+    align-self: center;
+  }
+  .flow-title {
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+  }
+  .flow-arrow-sp {
+    margin: -24px 0px;
+  }
+  .disease-title {
+    font-size: 18px;
+  }
+  .disease-description {
+    margin-top: 8px;
+  }
+  .faq-header {
+    width: 100%;
+    padding: 0 !important;
+  }
+  .faq-title {
+    font-size: 24px;
+    margin-top: 12px;
+  }
+  .faq-q {
+    margin: 0;
+  }
+  .faq-question-text {
+    font-size: 14px;
+  }
+  .faq-answer-text {
+    font-size: 14px;
+  }
+  .group-title {
+    font-size: 24px;
+  }
+  .group-image {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
   }
 }
 

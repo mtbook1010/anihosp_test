@@ -80,7 +80,7 @@
 
   <section class="sticky-cta-sticky">
     <div class="sticky-cta-content">
-      <p class="sticky-cta-message">まずはお電話ください</p>
+      <p class="sticky-cta-message">まずは<br class="pc-size-none" />お電話ください</p>
       <div class="sticky-contact-info">
         <img loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/b81ba95d31ffbb4635c01edf6d33bd9761092a59a84bc8cdf7d22fa8a1772719?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
@@ -501,7 +501,11 @@
               </div>
             </article>
           </div>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d4f95000cdc98f5e9895da6e5ef8dceddba67ca574cacc300b4140571c2ea0b?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+            alt="" class="flow-arrow flow-arrow-sp pc-size-none" />
           <div class="flow-step-row">
+
             <article class="flow-step">
               <header class="flow-step-header">
                 <img
@@ -539,7 +543,7 @@
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4d9eca8730a16b9eb2e3e367494defd47e07f127c14fa123df37667dd9de60e?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
           alt="" class="diseases-icon" />
-        <div class="diseases-title">整形外科でみることの多い病気</div>
+        <div class="diseases-title">整形外科でみることの<br class="pc-size-none" />多い病気</div>
       </header>
       <div class="diseases-grid">
         <div class="diseases-row">
@@ -858,7 +862,7 @@
 
     @media (max-width: 991px) {
       .footer {
-        padding: 0 20px;
+        padding: 24px 20px 80px 20px;
       }
     }
 
@@ -886,6 +890,7 @@
     @media (max-width: 991px) {
       .nav-links {
         white-space: normal;
+        width: 100%;
       }
     }
 
@@ -902,6 +907,7 @@
     @media (max-width: 991px) {
       .nav-item {
         white-space: normal;
+        width: 100%;
       }
     }
 
@@ -921,7 +927,7 @@
     @media (max-width: 991px) {
       .consultation-box {
         max-width: 100%;
-        padding: 0 20px;
+        padding: 20px;
       }
     }
 
@@ -1110,6 +1116,47 @@
     @media (max-width: 991px) {
       .map-image {
         max-width: 100%;
+      }
+
+      .consultation-description {
+        font-size: 14px;
+      }
+
+      .sticky-cta-sticky {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 1000;
+        border-radius: 0px;
+        background: var(--red, #f9685f);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        white-space: nowrap;
+        justify-content: center;
+        padding: 12px 12px;
+      }
+
+      .sticky-cta-content {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .sticky-cta-message {
+        font-size: 12px;
+        padding: 10px;
+        height: auto;
+        text-align: left;
+      }
+
+      .sticky-phone-number {
+        font-size: 24px;
+      }
+
+      .sticky-contact-info {
+        gap: 8px;
+        margin-top: 0px;
       }
     }
 

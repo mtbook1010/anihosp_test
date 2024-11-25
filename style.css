@@ -743,7 +743,7 @@ header {
   font-weight: 500;
   line-height: 2;
   letter-spacing: 0.96px;
-  margin-top: 40px;
+  margin-top: 24px;
 }
 
 .doctor-credentials {
@@ -768,7 +768,7 @@ header {
 .doctor-name {
   font-size: 24px;
   letter-spacing: 0.48px;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .section-divider {

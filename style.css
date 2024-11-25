@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box !important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1638,6 +1639,7 @@ header {
   .group-header {
     max-width: 100%;
     white-space: initial;
+    padding: 0 !important;
   }
 }
 
@@ -1668,7 +1670,8 @@ header {
 @media (max-width: 991px) {
   .group-subtitle {
     white-space: initial;
-    padding: 0 20px;
+    padding: 8px 20px;
+    margin-top: 16px;
   }
 }
 

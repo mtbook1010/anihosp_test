@@ -78,7 +78,213 @@
     }
   </style>
 
-  <section class="sticky-cta-sticky">
+  <style>
+    .profile-icon-container {
+      display: flex;
+      position: fixed;
+      top: 24px;
+      right: 36px;
+      z-index: 9999;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: #2485cb;
+      overflow: hidden;
+      border: 1px solid rgb(255 255 255 / 0.1);
+    }
+
+    .profile-icon {
+      width: 24px;
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* 初期スタイル */
+    .menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10%);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+      background-color: #fff;
+    }
+
+    .menu-overlay.open {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      z-index: 9998;
+    }
+
+    .menu-button-sp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .menu-button.open .profile-icon {
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-container-sp {
+      display: flex;
+      height: 100vh;
+      /* gap: 0px; */
+      text-align: center;
+      color: #252525;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 48px;
+      padding-top: 120px;
+      gap: 24px;
+    }
+
+    .nav-link-sp,
+    .contact-button-sp {
+      display: block;
+      margin: 10px 0;
+      color: #252525;
+      text-decoration: none;
+    }
+
+    .nav-divider-sp {
+      width: 100%;
+      height: 1px;
+      background-color: rgb(217 217 217 / 0.4);
+    }
+
+    .nav-link-sp {
+      font-size: 18px;
+      font-weight: bold;
+      font-family: YuGothic, sans-serif;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .contact-button-sp {
+      display: flex;
+      background: #2485cb;
+      padding: 16px 24px;
+      border-radius: 8px;
+      color: #fff;
+      width: 100%;
+      justify-content: center;
+    }
+  </style>
+
+  <section class="pc-size-none profile-icon-container">
+    <button id="menu-button" class="menu-button-sp">
+      <img src="./assets/img/open-menu.svg" alt="Profile icon" loading="lazy" class="profile-icon" />
+    </button>
+  </section>
+  <div id="menu-overlay" class="menu-overlay hidden">
+    <nav class="nav-container-sp">
+      <a href="#about" class="nav-link-sp">私たちについて</a>
+      <span class="nav-divider-sp" aria-hidden="true"></span>
+      <a href="#thought" class="nav-link-sp">私たちの想い</a>
+      <span class="nav-divider-sp" aria-hidden="true"></span>
+      <a href="#for-owners" class="nav-link-sp">飼い主様へ</a>
+      <span class="nav-divider-sp" aria-hidden="true"></span>
+      <a href="#examination-flow" class="nav-link-sp">診察の流れ</a>
+      <a href="tel:0754653330" class="contact-button-sp">
+        <div class="contact-content-fv">
+          <div class="contact-icon-wrapper">
+            <img loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/b594d2dcfce92edcfbbbaf3eea1038b32273238ef0550b236ce84f1a73b14ede?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
+              class="contact-icon" alt="" />
+            <span class="contact-label">TEL</span>
+          </div>
+          <span class="contact-number">075-465-3330</span>
+        </div>
+      </a>
+    </nav>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuButton = document.getElementById('menu-button');
+      const menuOverlay = document.getElementById('menu-overlay');
+      const profileIcon = document.querySelector('.profile-icon'); // アイコン画像要素
+
+      // 新しい画像URL
+      const newImageUrl = './assets/img/close-menu.svg'; // 適当なURLに置き換え
+
+      // 元の画像URLを保持
+      const originalImageUrl = profileIcon.src;
+
+      // メニューを閉じる関数
+      const closeMenu = () => {
+        menuOverlay.classList.remove('open');
+        menuButton.classList.remove('open');
+        menuButton.style.backgroundColor = ''; // 背景色をリセット
+        profileIcon.src = originalImageUrl; // 画像を元に戻す
+      };
+
+      menuButton.addEventListener('click', () => {
+        const isOpen = menuOverlay.classList.contains('open');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          menuOverlay.classList.add('open');
+          menuButton.classList.add('open');
+          menuButton.style.backgroundColor = '#888'; // 背景色をグレーに
+          profileIcon.src = newImageUrl; // 新しい画像に変更
+        }
+      });
+
+      menuOverlay.addEventListener('click', (event) => {
+        if (event.target === menuOverlay) {
+          closeMenu();
+        }
+      });
+
+      // メニュー内のリンククリック時にメニューを閉じる
+      const navLinks = document.querySelectorAll('.nav-link-sp, .contact-button-sp');
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          closeMenu();
+        });
+      });
+    });
+
+  </script>
+
+
+
+  <a href="tel:0754653330" style="text-decoration: none;" class="sticky-cta-sticky">
     <div class="sticky-cta-content">
       <p class="sticky-cta-message">まずは<br class="pc-size-none" />お電話ください</p>
       <div class="sticky-contact-info">
@@ -88,17 +294,18 @@
         <p class="sticky-phone-number">075-465-3330</p>
       </div>
     </div>
-  </section>
+  </a>
 
   <header>
     <nav class="nav-container">
       <a href="#about" class="nav-link">私たちについて</a>
       <span class="nav-divider" aria-hidden="true"></span>
+      <a href="#thought" class="nav-link">私たちの想い</a>
+      <span class="nav-divider" aria-hidden="true"></span>
       <a href="#for-owners" class="nav-link">飼い主様へ</a>
       <span class="nav-divider" aria-hidden="true"></span>
       <a href="#examination-flow" class="nav-link">診察の流れ</a>
       <span class="nav-divider" aria-hidden="true"></span>
-      <a href="#contact" class="nav-link">お問い合わせ</a>
       <a href="tel:0754653330" class="contact-button">
         <div class="contact-content-fv">
           <div class="contact-icon-wrapper">
@@ -141,7 +348,7 @@
       </div>
 
     </div>
-    <main class="content-wrapper">
+    <main id="about" class="content-wrapper">
       <article class="card-container">
         <div class="header-section">
           <div class="title-wrapper">
@@ -307,7 +514,7 @@
     </main>
   </section>
 
-  <section class="vet-services">
+  <section id="thought" class="vet-services">
     <img class="vs-content-img" src="./assets/img/sec-image-bg.png" alt="">
     <div class="vs-content-wrapper">
       <div class="vs-content-wrap">
@@ -375,7 +582,7 @@
           </div>
         </article>
 
-        <section class="important-info">
+        <section id="for-owners" class="important-info">
           <div class="ip-info-title">必ずご確認ください</div>
           <div class="ip-info-content">
             <div class="ip-info-card">
@@ -439,7 +646,7 @@
     </div>
   </section>
 
-  <section class="flow-section">
+  <section id="examination-flow" class="flow-section">
     <div class="flow-container">
       <div class="flow-content">
         <header class="flow-header">
@@ -458,7 +665,7 @@
               <div class="flow-step-content">
                 <p class="flow-step-description">まずはお気軽にお問い合わせください。</p>
                 <div class="flow-contact">
-                  <div class="flow-contact-button">
+                  <a href="tel:0754653330" style="text-decoration: none;" class="flow-contact-button">
                     <div class="flow-contact-info">
                       <div class="flow-contact-phone">
                         <img
@@ -467,7 +674,7 @@
                         <span class="flow-contact-number">075-465-3330</span>
                       </div>
                     </div>
-                  </div>
+                  </a>
                   <p class="flow-contact-hours">（年中無休 9:00～22:30）</p>
                 </div>
               </div>
@@ -761,7 +968,7 @@
               <p class="group-description">
                 2013年に開院。年中無休・夜間診察も受付。TPLOなど、整形外科における高難易度手術にも対応可能。わんちゃん、ねこちゃんに負担をかけないような手術・治療を心がけています。</p>
             </div>
-            <a href="#" class="group-link">
+            <a href="https://animal-kyoto.jp/" style="text-decoration: none;" class="group-link">
               <span class="group-link-text">公式ホームページ</span>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d6694f72fba855733ebab367602f4dc3f1fc33e4a0dc8f1836a7227be685ec?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
@@ -787,7 +994,7 @@
               <p class="group-description">2023年3月にオープン。CUaRE DOG
                 CAREを併設しており、病気の治療だけでなく、爪切りや耳掃除などわんちゃんの健康を目的とした日常ケアを提供しています。完全予約制で待ち時間が少なく、個室診療で安心してご利用いただけます。</p>
             </div>
-            <a href="#" class="group-link">
+            <a href="https://animal-shijo.com/" style="text-decoration: none;" class="group-link">
               <span class="group-link-text">公式ホームページ</span>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d6694f72fba855733ebab367602f4dc3f1fc33e4a0dc8f1836a7227be685ec?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
@@ -813,7 +1020,7 @@
               <p class="group-description">
                 京都で唯一のねこ専門病院。デリケートなねこちゃんに配慮し、通院におけるストレスを緩和できるような環境づくりを意識し、ねこちゃんそれぞれの個性に合った診療スタイルで対応いたします。</p>
             </div>
-            <a href="#" class="group-link">
+            <a href="https://neko-kyoto.jp/" style="text-decoration: none;" class="group-link">
               <span class="group-link-text">公式ホームページ</span>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d6694f72fba855733ebab367602f4dc3f1fc33e4a0dc8f1836a7227be685ec?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
@@ -839,7 +1046,7 @@
               <p class="group-description">
                 2018年より「どうぶつ病院京都グループ」に加入。JAHA内科認定医が在籍しており、より専門的な治療に対応可能。本院や四条堀川、ねこの病院とも連携しながら動物達の快適な暮らしをサポートします。</p>
             </div>
-            <a href="#" class="group-link">
+            <a href="https://animal-katsura.jp/" style="text-decoration: none;" class="group-link">
               <span class="group-link-text">公式ホームページ</span>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/d6d6694f72fba855733ebab367602f4dc3f1fc33e4a0dc8f1836a7227be685ec?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
@@ -1177,15 +1384,33 @@
       white-space: nowrap;
       border: 0;
     }
+
+    .sp-size-none {
+      display: block;
+    }
+
+    .pc-size-none {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .sp-size-none {
+        display: none;
+      }
+
+      .pc-size-none {
+        display: block;
+      }
+    }
   </style>
 
   <footer class="footer">
     <div class="footer-content">
       <nav class="nav-links">
         <a href="#about" class="nav-item">私たちについて</a>
+        <a href="#thought" class="nav-item">私たちの想い</a>
         <a href="#for-owners" class="nav-item">飼い主様へ</a>
         <a href="#consultation-flow" class="nav-item">診察の流れ</a>
-        <a href="#contact" class="nav-item">お問い合わせ</a>
       </nav>
       <section class="consultation-box">
         <div class="consultation-content">
@@ -1194,12 +1419,12 @@
             <p class="consultation-description">ペット・飼主様の状況に合わせて、下記の中から適切な病院をご案内いたします。</p>
           </div>
           <div class="contact-info">
-            <div class="phone-number">
+            <a href="tel:0754653330" style="text-decoration: none;" class="phone-number">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/ebd05ab2bbd3d5aba6c0624d1825f8c976d3f5ad9633b7191515ef4117e38c6b?placeholderIfAbsent=true&apiKey=73029e11ce7f4ed7a310e1d29d5340c7"
                 alt="Phone icon" class="phone-icon" />
               <span>075-465-3330</span>
-            </div>
+            </a>
             <div class="hospital-list">
               <hr class="hospital-divider" />
               <div class="hospital-grid">

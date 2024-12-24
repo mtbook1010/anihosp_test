@@ -480,6 +480,7 @@ header {
   display: flex;
   gap: 48px;
   flex-wrap: wrap;
+  align-items: center
 }
 
 .contact-content {
@@ -571,11 +572,64 @@ header {
 }
 
 .contact-image {
-  width: 396px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
   border-radius: 14px;
   object-fit: contain;
   flex: 1;
   min-width: 240px;
+}
+
+.contact-image-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 396px;
+  min-width: 240px;
+}
+
+.contact-image-wrap p{
+  font: 700 14px YuGothic, sans-serif;
+  color: #2485cb;
+}
+
+.contact-image img{
+  width: 100%;
+}
+
+.map-link{
+  position: absolute;
+  width: 22px;
+  height: 28px;
+  border-radius: 99px;
+}
+
+.map-link-01{
+  top: 19%;
+  left: 42%;
+  background-color: none;
+}
+
+.map-link-02{
+  top: 19%;
+  left: 50%;
+  background-color: none;
+}
+
+.map-link-03{
+  top: 46%;
+  left: 67%;
+  background-color: none;
+}
+
+.map-link-04{
+  top: 87%;
+  left: 29%;
+  background-color: none;
 }
 
 @media (max-width: 991px) {

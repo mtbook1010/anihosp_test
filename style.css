@@ -632,6 +632,39 @@ header {
   background-color: none;
 }
 
+.map-link-n{
+  position: absolute;
+  height: 26px;
+  border-radius: 99px;
+}
+.map-link-01-n{
+  top: 24%;
+  left: 36%;
+  width: 28px;
+  background-color: none;
+}
+
+.map-link-02-n{
+  top: 14%;
+  left: 54%;
+  width: 58px;
+  background-color: none;
+}
+
+.map-link-03-n{
+  top: 46%;
+  left: 73%;
+  width: 58px;
+  background-color: none;
+}
+
+.map-link-04-n{
+  top: 88%;
+  left: 16%;
+  width: 56px;
+  background-color: none;
+}
+
 @media (max-width: 991px) {
   .card-container {
     padding: 36px 24px;
